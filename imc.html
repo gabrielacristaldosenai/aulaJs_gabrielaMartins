@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br>");
+        }
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+        function calculaImc(peso, altura){
+            return peso / (altura * altura);
+        }
+        /*let imcGabi = calculaImc(45, 1.58);
+        mostra(imcGabi);*/
+        let nome = prompt("Informe o seu nome: ");
+        let altura = prompt(nome + ", informe a sua altura(em metros): ");
+        let peso = prompt(nome + ", informe o seu peso(em kg): ");
+        let imc = calculaImc(peso, altura);
+        mostra(nome + ", o seu IMC calculado é: " + Math.round(imc));
+
+    </script>
+</body>
+
+</html>
